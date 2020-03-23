@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+input.search {
+  padding: 5px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #635058;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #635058;
+  min-height: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: white;
+}
+
+.companies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.company {
+  flex-basis: 25%;
+  flex-grow: 0;
+  margin: 0 10px;
+}
+
+.mail-icon {
+  margin-right: 20px !important;
+  transition: linear 0.3s;
+}
+.mail-icon:hover {
+  cursor: pointer !important;
+}
