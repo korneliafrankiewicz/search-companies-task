@@ -3,11 +3,11 @@ import { Image } from "semantic-ui-react";
 
 export default class FetchComanies extends React.Component {
   props = {
-    searchValue: ""
+    searchValue: "",
   };
 
   state = {
-    data: []
+    data: [],
   };
 
   async componentDidMount() {
@@ -21,14 +21,18 @@ export default class FetchComanies extends React.Component {
     return (
       <div className="companies">
         {this.state.data
-          .filter(item => item.name.includes(this.props.searchValue))
+          .filter((item) =>
+            item.name.toLowerCase().includes(this.props.searchValue)
+          )
           .map((item, index) => (
             <>
               <div className="company">
                 <Image
+                  class="img"
                   src="https://d3dbtvmfwwhlf2.cloudfront.net/pub/Marketing/WEBSITE+images/Hero+pictures/kemppi-company-facts-hero.jpg?c=hero_jpg"
                   size="large"
                 />
+
                 <p>
                   <b>Name: </b>
                   {item.name}{" "}

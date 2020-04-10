@@ -5,7 +5,7 @@ import { Icon } from "semantic-ui-react";
 
 class App extends React.Component {
   state = {
-    searchValue: " "
+    searchValue: " ",
   };
 
   filterData(value) {
@@ -21,12 +21,12 @@ class App extends React.Component {
               className="search"
               placeholder="Search..."
               type="text"
-              onChange={event => this.filterData(event.target.value)}
+              onChange={(event) => this.filterData(event.target.value)}
             />
           </div>
         </header>
         <body>
-          <FetchCompanies searchValue={this.state.searchValue} />
+          <FetchCompanies searchValue={this.state.searchValue.toLowerCase()} />
         </body>
         <footer className="App-footer">
           <>
